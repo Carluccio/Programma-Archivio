@@ -1347,7 +1347,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 	int index2 = imageList->Add(bitmap2);
 	int index3 = imageList->Add(bitmap3);
 	SetIcon(wxICON(sample));
-	//this->SetSize(wxSize(dpiz(900), dpiz(630)));
+	this->SetSize(wxSize(dpiz(900), dpiz(630)));
 	this->SetSizeHints( wxDefaultSize, wxDefaultSize );
 	this->SetBackgroundColour( wxColour( 180, 180, 180 ) );
 
