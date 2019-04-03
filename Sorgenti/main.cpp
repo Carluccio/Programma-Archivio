@@ -3,7 +3,7 @@
 // di Carlo Sala
 // Via Plinio 6 - Torno (Co)
 // Tel. 031 417092 Cell. 3207591458
-// 01/03/2014 V.3.1.5
+// 01/04/2019 v. 4.0.0
 // License:   	wxWidgets license (www.wxwidgets.org)
 //
 #include <iostream>
@@ -1886,7 +1886,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 
 	sbSizer9->Add( m_bitmap1, 0, wxALL|wxALIGN_RIGHT, 5 );
 
-	m_hyperlink1 = new wxGenericHyperlinkCtrl( m_panel1, wxID_ANY, _T("© Carlo Sala Software - v.4.0.0"), wxT("http://www.carlosala.net"), wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE );
+	m_hyperlink1 = new wxGenericHyperlinkCtrl( m_panel1, wxID_ANY, _T("© Carlo Sala Software - v.4.0.0"), wxT("https://www.carlosala.net"), wxDefaultPosition, wxDefaultSize, wxHL_DEFAULT_STYLE );
 
 	m_hyperlink1->SetHoverColour( wxColour( 4, 32, 221 ) );
 	m_hyperlink1->SetNormalColour( wxColour( 80, 80, 80 ) );
