@@ -891,7 +891,7 @@ protected:
 		} else {
 			db->Open(testDBName);
 			db->ExecuteUpdate(wxT("CREATE TABLE Nominativi (ID integer primary key default null, COGNOME varchar(20), NOME varchar(20), ATTIVITA varchar(10), INDIRIZZO varchar(30), CAP varchar(5), CITTA varchar(20), TELEFONO varchar(12), SOCIO varchar(1), DATA varchar(4), EMAIL varchar(35), INIZIATIVE varchar(4))"));
-			wxMessageBox(_T("Ho creato un archivio vuoto nel percorso indicato ... !"),
+			wxMessageBox(_T("Ho creato un archivio vuoto nel percorso indicato ... !\nLa cartella Archivio creata nella radice del disco dove si trova il programma e contenente l'archivio, può essere cancellata se l'archivio stesso non interessa più"),
 			             _T("Avviso"), wxOK | wxICON_EXCLAMATION);
 		}
 		return db;
