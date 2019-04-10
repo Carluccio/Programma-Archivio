@@ -304,6 +304,7 @@ protected:
 	wxStaticText* m_staticText36;
 	wxStatusBar* m_statusBar1;
 	virtual dpiz(int dxy) {return newDim->wxWindow::FromDIP(dxy);}
+	virtual dpoz(int dxy) {return newDim->wxWindow::ToDIP(dxy);}
 	// Virtual event handlers, overide them in your derived class
 	virtual void OnKeyPress( wxKeyEvent& event ) {
 		event.Skip();
@@ -2447,6 +2448,8 @@ wxTextFile tfile;
 		yp= tfile. GetNextLine ();
 		x=wxAtoi(xp);
 		y=wxAtoi(yp);
+		x=dpiz(x);
+		y=dpiz(y);
 		this->SetPosition(wxPoint(x,y));
 		if (m_dirPicker21->GetPath() == "") {
 			m_dirPicker21->Enable( false );
@@ -2522,8 +2525,11 @@ void guiMyFrame::OnCloseFrame( wxCloseEvent& event )
 	xp="";
 	yp="";
 	this->GetPosition(&x, &y);
+	x=dpoz(x);
+	y=dpoz(y);
 	xp <<  x;
 	yp <<  y;
+	
 	wxTextFile tfile;
 	if(!(tfile.Open ("\\Archivio\\Settings.txt"))) {
 		wxMessageBox(_T("Non posso aprire il flle Impostazioni Iniziali !!"),
@@ -2629,8 +2635,11 @@ void guiMyFrame::m_bpButton7OnButtonClick( wxCommandEvent& event )
 	xp="";
 	yp="";
 	this->GetPosition(&x, &y);
+	x=dpoz(x);
+	y=dpoz(y);	
 	xp <<  x;
 	yp <<  y;
+
 	wxTextFile tfile;
 	if(!(tfile.Open ("\\Archivio\\Settings.txt"))) {
 		wxMessageBox(_T("Non posso aprire il flle Impostazioni Iniziali !!"),
