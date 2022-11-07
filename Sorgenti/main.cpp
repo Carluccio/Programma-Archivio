@@ -3,11 +3,13 @@
 // di Carlo Sala
 // Via Plinio 6 - Torno (Co)
 // Tel. 031 417092 Cell. 3207591458
+// Mail: info@carlosala.net
 // 01/04/2019 v. 4.0.1
 // License:   	wxWidgets license (www.wxwidgets.org)
 //
 #include <iostream>
 #include <wx/wxprec.h>
+#include <winsock2.h>
 #include <windows.h>
 #ifdef __BORLANDC__
 #pragma hdrstop
@@ -1509,19 +1511,19 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 	/*m_bpButton13 = new wxBitmapButton( m_toolBar1, wxID_ANY, wxBitmap( wxT("Img/application_delete.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );*/
 	
 	
-	m_bpButton11 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/Exit.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton11 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/Exit.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	bSizer6->Add( m_bpButton11, 0, wxALL, 5 );
 
-	m_bpButton12 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/configure-2.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton12 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/configure-2.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	bSizer6->Add( m_bpButton12, 0, wxALL, 5 );
 
-	m_bpButton13 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/run-build-prune.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton13 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/run-build-prune.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	bSizer6->Add( m_bpButton13, 0, wxALL, 5 );
 
-	m_bpButton14 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/help.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton14 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/help.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	bSizer6->Add( m_bpButton14, 0, wxALL, 5 );
 
-	m_bpButton15 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/mail-forward.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton15 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/mail-forward.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	bSizer6->Add( m_bpButton15, 0, wxALL, 5 );
 
 	bSizer4->Add( bSizer6, 0, wxEXPAND, 5 );
@@ -1590,7 +1592,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 	m_dirPicker2 = new wxDirPickerCtrl( m_panel1, wxID_ANY, wxEmptyString, _T("Selezionare una cartella"), wxDefaultPosition, wxDefaultSize, wxDIRP_DEFAULT_STYLE|wxTAB_TRAVERSAL );
 	sbSizer2->Add( m_dirPicker2, 0, wxTOP|wxBOTTOM|wxEXPAND, 5 );
 
-	m_bpButton17 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/disk.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton17 = new wxBitmapButton( m_panel1, wxID_ANY, wxBitmap( wxT("bmp/disk.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	sbSizer2->Add( m_bpButton17, 0, wxALL, 5 );
 
 	bSizer28->Add( sbSizer2, 1, wxBOTTOM|wxRIGHT|wxLEFT, 5 );
@@ -1866,7 +1868,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 	sbSizer71 = new wxStaticBoxSizer( new wxStaticBox( m_panel1, wxID_ANY, _T("Per quelli scelti nelle opzioni") ), wxVERTICAL );
 
 	sbSizer71->Add( 0, 0, 1, wxEXPAND, 5 );
-	m_bpButton9 = new wxBitmapButton( m_panel1, 27, wxBitmap( wxT("bmp/mail-reply-all.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton9 = new wxBitmapButton( m_panel1, 27, wxBitmap( wxT("bmp/mail-reply-all.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	m_bpButton9->Enable( false );
 
 	sbSizer71->Add( m_bpButton9, 0, wxALL, 5 );
@@ -1882,7 +1884,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 
 	sbSizer9->Add( 0, 0, 1, wxEXPAND, 5 );
 	
-	wxBitmap bmp = wxBitmap( wxT("bmp/wx.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(48), dpiz(35));
+	wxBitmap bmp = wxBitmap( wxT("bmp/wx.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(45,33);
 	m_bitmap1 = new wxStaticBitmap( m_panel1, wxID_ANY, bmp, wxDefaultPosition, wxDefaultSize, 0 );
 
 	sbSizer9->Add( m_bitmap1, 0, wxALL|wxALIGN_RIGHT, 5 );
@@ -1931,7 +1933,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 
 	bSizer39->Add( 0, 0, 1, wxEXPAND, 5 );
 
-	m_bpButton5 = new wxBitmapButton( m_panel2, 25, wxBitmap( wxT("bmp/run-build-file.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton5 = new wxBitmapButton( m_panel2, 25, wxBitmap( wxT("bmp/run-build-file.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	m_bpButton5->Enable( false );
 
 	bSizer39->Add( m_bpButton5, 0, wxALL|wxEXPAND, 5 );
@@ -1940,7 +1942,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 	m_staticText24->Wrap( -1 );
 	bSizer39->Add( m_staticText24, 0, wxEXPAND|wxALL, 5 );
 
-	m_bpButton6 = new wxBitmapButton( m_panel2, 26, wxBitmap( wxT("bmp/printer1.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton6 = new wxBitmapButton( m_panel2, 26, wxBitmap( wxT("bmp/printer1.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	m_bpButton6->Enable( false );
 
 	bSizer39->Add( m_bpButton6, 0, wxALL|wxEXPAND, 5 );
@@ -1949,7 +1951,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 	m_staticText25->Wrap( -1 );
 	bSizer39->Add( m_staticText25, 0, wxALL|wxEXPAND, 5 );
 
-	m_bpButton111 = new wxBitmapButton( m_panel2, wxID_ANY, wxBitmap( wxT("bmp/mail-reply-all.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton111 = new wxBitmapButton( m_panel2, wxID_ANY, wxBitmap( wxT("bmp/mail-reply-all.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	m_bpButton111->Enable( false );
 	bSizer39->Add( m_bpButton111, 0, wxALL|wxEXPAND, 5 );
 
@@ -2170,7 +2172,7 @@ MyFrame::MyFrame( wxWindow* parent, wxWindowID id, const wxString& title, const 
 
 	bSizer41->Add( 0, 0, 1, wxEXPAND, 5 );
 
-	m_bpButton10 = new wxBitmapButton( m_panel3, 40, wxBitmap( wxT("bmp/cog.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(dpiz(32), dpiz(32)), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
+	m_bpButton10 = new wxBitmapButton( m_panel3, 40, wxBitmap( wxT("bmp/cog.png"), wxBITMAP_TYPE_ANY ).ConvertToImage().Scale(27,27), wxDefaultPosition, wxDefaultSize, wxBU_AUTODRAW );
 	bSizer41->Add( m_bpButton10, 0, wxALL, 5 );
 
 	m_staticText26 = new wxStaticText( m_panel3, wxID_ANY, _T("\nSalva impostazioni"), wxDefaultPosition, wxDefaultSize, 0 );
@@ -3399,7 +3401,7 @@ void guiMyFrame::m_bpButton5OnButtonClick( wxCommandEvent& event )
 		round(((float)((float)(Stm1.Len())/175)/NR));
 		QuickPrint*  myprint = new QuickPrint(R1, wxT("Archivio"), 30);
 		QuickPrint*  myprint1 = new QuickPrint(R1, wxT("Archivio"), 30);
-
+		
 		myprint->performPageSetup(true);
 		myprint1->performPageSetup(false);
 		wxPrintDialogData data(myprint->getPrintData());
@@ -3706,14 +3708,11 @@ void guiMyFrame::Idle( wxIdleEvent& event )
 	}
 
 }
-
 bool MyApp::OnInit()
 {
 	loop_on = false;
 	principale = new guiMyFrame(NULL);
 	principale->Show();
-	//SetTopWindow( new guiMyFrame( NULL ) ); // se guiMyFrame è la classe derivata
-	//GetTopWindow()->Show();
 	return true;
 }
 guiMyDialog1::guiMyDialog1( wxWindow* parent ):MyDialog1( parent )
