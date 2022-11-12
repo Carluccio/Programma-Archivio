@@ -7,9 +7,11 @@
 // 28/11/2019
 // License:   	wxWidgets license (www.wxwidgets.org)
 //
-#define CREATEPROCESS_MANIFEST_RESOURCE_ID 1
-#define RT_MANIFEST 24
-CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "/wx/msw/file.manifest"
+#define wxUSE_NO_MANIFEST 0
+#define wxUSE_DPI_AWARE_MANIFEST 2
+#if !defined(__llvm__)
+#include "wx/msw/wx.rc"
+#endif
 aaaaaaaa ICON "Db.ico"
 // this icon is used with wxFrame::SetIcon()
 sample ICON "Db.ico"
